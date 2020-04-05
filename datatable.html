@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Data Table</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='datatable.css'>
+</head>
+
+<body>
+    <table class="table-fixed">
+        <thead>
+            <tr>
+                <th>Enter to search </th>
+                <th>
+                    <input placeholder="search country..." id="name-search" onchange="searchColumn('name')" />
+                </th>
+                <th>
+                    <input placeholder="search capital..." id="capital-search" onchange="searchColumn('capital')" />
+                </th>
+                <th>
+                    <input placeholder="search region..." id="region-search" onchange="searchColumn('region')" />
+                </th>
+                <th>
+                    <input placeholder="search subregion..." id="subregion-search" onchange="searchColumn('subregion')" />
+                </th>
+                <th>
+                    <input placeholder="search population..." id='population' onchange="searchColumn('population')" />
+                </th>
+            </tr>
+            <tr>
+                <th>Index </th>
+                <th onclick="sortColumn('name')" id="name">Country </th>
+                <th onclick="sortColumn('capital')" id="capital"> Capital</th>
+                <th onclick="sortColumn('region')" id="region"> Region</th>
+                <th onclick="sortColumn('subregion')" id="subregion"> Subregion</th>
+                <th onclick="sortColumn('population')" id="population"> Population</th>
+            </tr>
+
+        </thead>
+        <tbody id='table-data'>
+        </tbody>
+    </table>
+    <div id="entries"></div>
+    <div id='pagination'>
+        <button onclick="showPrev()" id='prev'>Prev</button>
+        <span id='page-number'></span>
+        <button onclick="showNext()" id='next'>Next</button>
+        <button id="reset" onclick="reset()">Reset</button>
+    </div>
+    <script src='datatable.js'></script>
+</body>
+
+</html>

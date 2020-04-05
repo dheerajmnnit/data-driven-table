@@ -1,0 +1,82 @@
+#myInput {
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.table-fixed {
+    width: 100%;
+}
+
+/*This will work on every browser*/
+.table-fixed thead th {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 999;
+    background-color: #000;
+    color: #fff;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#noresults, #dataTable tr {
+    display: none;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+th {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+tr:hover {
+    background-color: rgb(73, 67, 67);
+    color: #ffffff;
+}
+
+#pagination {
+    text-align: center;
+    padding: 12px;
+}
+
+#reset {
+    padding: 8px;
+    font-style: italic;
+    font-weight: bolder;
+    color: darkgray;
+    cursor: pointer;
+}
+
+#page-number {
+    padding: 12px;
+}
+
+#prev, #next, #reset{
+    cursor: pointer;
+    height: 30px;
+    width: 50px;
+    border-radius: 15px;
+}
+
+#entries {
+    text-align: center;
+    margin: 5px;
+}
